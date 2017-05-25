@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Youtube hit count",
+  "description": "This extension replaces default Youtube numbered view count to billion/million/k count",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["hitCount.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab", "tabs"
+  ]
+}
