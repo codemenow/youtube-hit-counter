@@ -1,6 +1,6 @@
 var hitCounter = function() {
     if(window.location.href.indexOf('www.youtube.com/watch') !== -1){
-        var el = document.getElementsByClassName('watch-view-count')[0];
+        var el = document.getElementsByClassName('view-count')[0];
         if(el){
             if(el.innerText.indexOf(' views') !== -1){
                 var count = parseInt(el.textContent.split(' views')[0].replace(/,/g, '')),
